@@ -28,13 +28,17 @@ public class StepTracker {
 
     }
 
-
+    // Y методу не требуется ничего возвращать
+    // R метод не изменяет значение поля в классе, а лишь создает новую переменную
+    // Затестируй и попробуй поменять цель. Обнаружишь, что цель не изменится
     int changeStepGoal(){
         System.out.println("CHANGE GOAL:");
         int goalBySteps = scanner.nextInt();
         return goalBySteps;
     }
+
     void  printStatistic(){
+        // R - если пользователь вводит неправильный месяц, программа выдает исключение и вылетает
         System.out.println("Write Month");
         int month = scanner.nextInt();
         MonthData monthData = monthToData[month - 1];

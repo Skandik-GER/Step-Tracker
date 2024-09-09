@@ -1,8 +1,8 @@
+//R лишние импорты лучше удалять
 import java.util.Scanner;
 
 public class MonthData {
     int[] days = new int[30];
-
 
     void printDaysAndStepsFromMonth(){
         for(int i = 0;i < days.length;i++){
@@ -25,6 +25,7 @@ public class MonthData {
         }
         return maxSteps;
     }
+    //G алгоритм работает исправно при любых случаях, замечательно реализовано!:)
     int bestSeries(int goalByStepsPerDay){
         int currentSeries = 0;
         int finalSeries = 0;

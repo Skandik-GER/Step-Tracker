@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+//R лишние комментарии лучше удалять
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -25,6 +27,8 @@ public class Main {
         }
 
     }
+    //Y название метода не соответствует стандарту LowerCamelCase
+    // лучше printMenu
     public static void printmenu(){
         System.out.println("1 - Statistic ");
         System.out.println("2 - Add New Steps");
