@@ -28,27 +28,29 @@ public class StepTracker {
 
     }
 
-    // Y методу не требуется ничего возвращать
-    // R метод не изменяет значение поля в классе, а лишь создает новую переменную
-    // Затестируй и попробуй поменять цель. Обнаружишь, что цель не изменится
-    int changeStepGoal(){
+
+
+    void changeStepGoal(){
         System.out.println("CHANGE GOAL:");
-        int goalBySteps = scanner.nextInt();
-        return goalBySteps;
+        goalByStepsPerDay = scanner.nextInt();
     }
 
     void  printStatistic(){
-        // R - если пользователь вводит неправильный месяц, программа выдает исключение и вылетает
         System.out.println("Write Month");
         int month = scanner.nextInt();
         MonthData monthData = monthToData[month - 1];
-        monthData.printDaysAndStepsFromMonth();
-        System.out.println("TOTTALY STEPS: " + monthData.sumStepsFromMonth());
-        System.out.println("MAX STEPS: " + monthData.maxSteps());
-        System.out.println("STEPS IN KM: " + converter.convertToKm(monthData.sumStepsFromMonth()));
-        System.out.println("KILOCALORIES : " +converter.convertStepsToKilocalories(monthData.sumStepsFromMonth()));
-        System.out.println("BEST SERIES: " + monthData.bestSeries(goalByStepsPerDay));
+        if (month <= 12 && month > 0) {
+            monthData.printDaysAndStepsFromMonth();
+            System.out.println("TOTTALY STEPS: " + monthData.sumStepsFromMonth());
+            System.out.println("MAX STEPS: " + monthData.maxSteps());
+            System.out.println("STEPS IN KM: " + converter.convertToKm(monthData.sumStepsFromMonth()));
+            System.out.println("KILOCALORIES : " + converter.convertStepsToKilocalories(monthData.sumStepsFromMonth()));
+            System.out.println("BEST SERIES: " + monthData.bestSeries(goalByStepsPerDay));
+        }else{
+            System.out.println("WRONG MONTH");
+        }
     }
+
 
 
 }

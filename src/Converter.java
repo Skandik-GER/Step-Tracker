@@ -1,18 +1,11 @@
 public class Converter {
     int convertToKm(int steps){
-        int km = (steps*75) / 100000;
-        return km;
+        return (steps*75) / 100000;
 
-        // Y необязательно в данном случае создавать целую переменную
-        // нужное значение можно сразу возвращать
-        // return (steps * 75) / 100000;
     }
     int convertStepsToKilocalories(int steps){
-        int kilocal = (steps * 50) / 1000;
-        return kilocal;
+        return (steps * 50) / 1000;
 
-        // Y необязательно в данном случае создавать целую переменную
-        // нужное значение можно сразу возвращать
     }
 
 }

@@ -1,15 +1,11 @@
 import java.util.Scanner;
 
-//R лишние комментарии лучше удалять
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker(scanner);
         while (true){
-            printmenu();
+            printMenu();
             int command = scanner.nextInt();
             if (command == 1){
                 stepTracker.printStatistic();
@@ -27,9 +23,8 @@ public class Main {
         }
 
     }
-    //Y название метода не соответствует стандарту LowerCamelCase
-    // лучше printMenu
-    public static void printmenu(){
+
+    public static void printMenu(){
         System.out.println("1 - Statistic ");
         System.out.println("2 - Add New Steps");
         System.out.println("3 - Change Step Goal");
