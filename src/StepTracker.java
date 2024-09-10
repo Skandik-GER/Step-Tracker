@@ -28,13 +28,13 @@ public class StepTracker {
 
     }
 
-
-
     void changeStepGoal(){
         System.out.println("CHANGE GOAL:");
         goalByStepsPerDay = scanner.nextInt();
     }
 
+    // Red
+    // Программа все ще вылетает с исключением при неправильном вводе месяца
     void  printStatistic(){
         System.out.println("Write Month");
         int month = scanner.nextInt();
