@@ -27,7 +27,8 @@ public class StepTracker {
         }
 
     }
-
+    // Red
+    // Пользователь может задать цель меньше либо равную нулю
     void changeStepGoal(){
         System.out.println("CHANGE GOAL:");
         goalByStepsPerDay = scanner.nextInt();
