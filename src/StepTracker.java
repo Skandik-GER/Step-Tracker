@@ -27,20 +27,22 @@ public class StepTracker {
         }
 
     }
-    // Red
-    // Пользователь может задать цель меньше либо равную нулю
-    void changeStepGoal(){
+
+    void changeStepGoal() {
         System.out.println("CHANGE GOAL:");
         goalByStepsPerDay = scanner.nextInt();
+        if (goalByStepsPerDay > 0) {
+            System.out.println("Goal Changed " + goalByStepsPerDay);
+        } else {
+            System.out.println("Not Changed");
+        }
     }
-
-    // Red
-    // Программа все ще вылетает с исключением при неправильном вводе месяца
+   //G  Молодец
     void  printStatistic(){
         System.out.println("Write Month");
         int month = scanner.nextInt();
-        MonthData monthData = monthToData[month - 1];
         if (month <= 12 && month > 0) {
+            MonthData monthData = monthToData[month - 1];
             monthData.printDaysAndStepsFromMonth();
             System.out.println("TOTTALY STEPS: " + monthData.sumStepsFromMonth());
             System.out.println("MAX STEPS: " + monthData.maxSteps());
@@ -51,7 +53,4 @@ public class StepTracker {
             System.out.println("WRONG MONTH");
         }
     }
-
-
-
 }
