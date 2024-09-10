@@ -30,14 +30,15 @@ public class StepTracker {
 
     void changeStepGoal() {
         System.out.println("CHANGE GOAL:");
-        goalByStepsPerDay = scanner.nextInt();
-        if (goalByStepsPerDay > 0) {
+        int steps = scanner.nextInt();
+        if (steps > 0) {
+            goalByStepsPerDay = steps;
             System.out.println("Goal Changed " + goalByStepsPerDay);
         } else {
             System.out.println("Not Changed");
         }
     }
-   //G  Молодец
+   //G  Молодец!
     void  printStatistic(){
         System.out.println("Write Month");
         int month = scanner.nextInt();
